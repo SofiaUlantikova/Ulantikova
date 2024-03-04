@@ -13,7 +13,7 @@ ssh-add ~/.ssh/id_ed25519
 5. Add SSH key
 #### Cloning repo under SSH
 1. 
-  1. Clone  
-  1. SSH 
+    - Clone  
+    - SSH 
 1. ^C link 
 1. `git clone "your_link"` 
