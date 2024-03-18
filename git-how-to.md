@@ -9,7 +9,7 @@ ssh-add ~/.ssh/id_ed25519
 1. Settings 
 2. SSH and GPG keys 
 3. New SSH key 
-4. `cat ~/.ssh/id_ed25519.pub` &rarr Key
+4. `cat ~/.ssh/id_ed25519.pub` &rarr; Key
 5. Add SSH key
 #### Cloning repo under SSH
 1. 
