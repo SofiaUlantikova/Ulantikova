@@ -30,7 +30,8 @@ try:
     while 1:
         val = adc(t)
         print(f'value = {val}, voltage = {3.3*val/256}')
-        GPIO.output(leds, tobin(val))
+        a = (val+1) // 32
+        GPIO.output(leds, [0 for _ in range(8-a)]+[1 for _ in range(a)])
 finally:
     GPIO.output(dac, 0)
     GPIO.output(troyka, 0)
