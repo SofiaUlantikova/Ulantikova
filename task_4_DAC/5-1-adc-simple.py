@@ -23,8 +23,11 @@ def adc(t):
 
 try:
     while 1:
-        val = adc(t)
-        print(f'value = {val}, voltage = {3.3*val/256}')
+        try:
+            val = adc(t)
+            print(f'value = {val}, voltage = {3.3*val/256}')
+        except TypeError:
+            print(f'value > 255, voltage > 3.3')
 finally:
     GPIO.output(dac, 0)
     GPIO.output(troyka, 0)
