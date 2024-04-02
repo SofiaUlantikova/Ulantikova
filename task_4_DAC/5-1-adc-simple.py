@@ -1,10 +1,10 @@
 import time
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
-dac = []
-comp = 0
-troyka = 0
-t = 0.001
+dac = [8, 11, 7, 1, 0, 5, 12, 6]
+comp = 14
+troyka = 13
+t = 0.005
 
 GPIO.setup(dac, GPIO.OUT)
 GPIO.setup(comp, GPIO.IN)
@@ -12,7 +12,6 @@ GPIO.setup(troyka, GPIO.OUT, initial=1)
 def tobin(n):
     a = list(bin(n))[2:]
     a = [0 for _ in range(8-len(a))] + list(map(int, a))
-    print(round(3.3/256*n, 3))
     return a
 
 def adc(t):
